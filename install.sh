@@ -61,10 +61,10 @@ cp "$SOURCE_DIR/index.php" "${TEAMPASS_PATH}/index.php"
 cp "$SOURCE_DIR/login.php" "${TEAMPASS_PATH}/includes/core/login.php"
 cp "$SOURCE_DIR/teampass.css" "${TEAMPASS_PATH}/includes/css/teampass.css"
 
-# Ativos Visuais (Imagens)
-cp "$SOURCE_DIR/img/Logo-SentinelArk.png" "${TEAMPASS_PATH}/includes/img/custom/Logo-SentinelArk.png"
-cp "$SOURCE_DIR/img/Logo-2-SentinelArk.png" "${TEAMPASS_PATH}/includes/img/custom/Logo-2-SentinelArk.png"
-cp "$SOURCE_DIR/img/Logo-2-SentinelArk.ico" "${TEAMPASS_PATH}/includes/img/custom/Logo-2-SentinelArk.ico"
+# Ativos Visuais (Imagens) - AGORA PROCURANDO NA RAIZ
+cp "$SOURCE_DIR/Logo-SentinelArk.png" "${TEAMPASS_PATH}/includes/img/custom/Logo-SentinelArk.png"
+cp "$SOURCE_DIR/Logo-2-SentinelArk.png" "${TEAMPASS_PATH}/includes/img/custom/Logo-2-SentinelArk.png"
+cp "$SOURCE_DIR/Logo-2-SentinelArk.ico" "${TEAMPASS_PATH}/includes/img/custom/Logo-2-SentinelArk.ico"
 echo "     Arquivos implantados."
 
 # --- Ajuste de Permissões ---
