@@ -33,10 +33,11 @@ cd "$TEAMPASS_PATH"
 BACKUP_DIR="${TEAMPASS_PATH}/backups_custom/$(date +%Y-%m-%d_%H-%M-%S)"
 echo "--> 2/6: Criando diretório de backup em $BACKUP_DIR..."
 mkdir -p "$BACKUP_DIR/includes/css"
+mkdir -p "$BACKUP_DIR/includes/core"
 
 echo "     Fazendo backup dos arquivos originais..."
 cp index.php "$BACKUP_DIR/index.php.backup"
-cp login.php "$BACKUP_DIR/login.php.backup"
+cp includes/core/login.php "$BACKUP_DIR/includes/core/login.php.backup"
 cp includes/css/teampass.css "$BACKUP_DIR/includes/css/teampass.css.backup"
 echo "     Backup concluído com sucesso."
 
@@ -57,7 +58,7 @@ mkdir -p "${TEAMPASS_PATH}/includes/img/custom"
 echo "--> 5/6: Copiando novos arquivos para o Teampass..."
 # Arquivos de Layout e Estilo
 cp "$SOURCE_DIR/index.php" "${TEAMPASS_PATH}/index.php"
-cp "$SOURCE_DIR/login.php" "${TEAMPASS_PATH}/login.php"
+cp "$SOURCE_DIR/login.php" "${TEAMPASS_PATH}/includes/core/login.php"
 cp "$SOURCE_DIR/teampass.css" "${TEAMPASS_PATH}/includes/css/teampass.css"
 
 # Ativos Visuais (Imagens)
