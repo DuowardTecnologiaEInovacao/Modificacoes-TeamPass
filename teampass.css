@@ -1,0 +1,506 @@
+/*!
+ *   AdminLTE v3.0.0-alpha
+ *   Author: Abdullah Almsaeed
+ *	 Website: AdminLTE.io <http://adminlte.io>
+ *   License: Open source - MIT <http://opensource.org/licenses/MIT>
+ */
+/*!
+ * Bootstrap v4.1.0 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+.login-page {
+    background: url("../images/login_wall_5.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.otv-page {
+    background: url("../images/otv-wall-1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    background-position: center center;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer_none {
+    cursor: none;
+}
+
+.dragndrop {
+    cursor: move;
+}
+
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.table {
+	table-layout:fixed;
+}
+
+.table-truncated td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item-description {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+}
+
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+  }
+
+.list-item-clicktoshow .user-fa-icon,
+.list-item-description .dragndrop {
+    line-height: 50px;
+}
+
+.list-item-clicktoshow.d-inline-flex {
+    max-width: 100%;
+    flex: 1;
+}
+
+.list-item-row-description-extend {
+    flex: 1;
+}
+
+.list-item-actions {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    color:#c4c4c4;
+}
+
+.simplePassMeter {
+    border: 1px solid #aaa;
+    background-color: #f3f3f3;
+    color: #666;
+    font-size: 1.5em;
+    padding: 10px 5px 0 5px;
+    margin: 10px;
+    width: 25%;
+}
+
+.meterFail { border: 1px solid #daa; background-color: #fdd; }
+.meterWarn { border: 1px solid #fd6; background-color: #feb; }
+.meterGood { border: 1px solid #ada; background-color: #dfd; }
+.meterExcel { border: 1px solid #aad; background-color: #ddf; }
+
+.simplePassMeterBar { background-color: #ddd; }
+.meterFail .simplePassMeterProgress  { background-color: #f66; }
+.meterWarn .simplePassMeterProgress  { background-color: #fd6; }
+.meterGood .simplePassMeterProgress  { background-color: #ada; }
+.meterExcel .simplePassMeterProgress { background-color: #88f; }
+
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;
+    _width: 160px;
+    padding: 4px 0;
+    margin: 2px 0 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.ui-menu-item {
+    display: block;
+    margin-left: 3px;
+    padding: 3px 15px 0px 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    cursor: pointer;
+}
+  
+.ui-state-focus, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+.icon-badge{
+    position:relative;
+    float:left;
+}
+
+.icon-badge-text{
+    margin: 0;
+    position:absolute;
+    top: -10px;
+    left: 9px;
+    font-size: .7rem;
+    font-weight: 300;
+    padding: 2px 4px;
+}
+
+.icon-badge-far {
+    right: -16px;
+}
+
+.icon-badge-text-bottom-right{
+    margin: 0;
+    position:absolute;
+    top: -10px;
+    left: 9px;
+    font-size: .7rem;
+    font-weight: 300;
+    padding: 2px 4px;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 40px;
+    background-color: rgb(255, 198, 198);
+    border: 1px solid rgb(243, 105, 105);
+    padding: 10px;
+}
+
+.row-selected {
+    background-color: #026fcc;
+}
+
+.btn-group {  
+    white-space: nowrap;              
+}
+.btn-group .btn {  
+    float: none;
+    display: inline-block;
+}
+ .btn + .dropdown-toggle { 
+    margin-left: -4px;
+}
+
+.dataTables_wrapper { 
+    overflow-x: visible; 
+    overflow-y: visible; 
+}
+
+.is-invalid .select2-selection,
+.needs-validation ~ span > .select2-dropdown{
+  border-color:red !important;
+}
+
+
+.card-header > .card-tools-left {
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+}
+
+.datatable.path {
+    font-size: 11pt;
+}
+
+.tp-borders {
+    border: 1px dashed #aaa !important;
+}
+
+.td-100 {
+    width:100px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    color:white;
+}
+
+.menu-footer {
+    position: fixed;
+    padding-bottom: 10px;
+    bottom: 0px;
+}
+
+.login-logo {
+    letter-spacing: 4px;
+    font-size: 40pt;
+    color: #082d51;
+}
+
+.img-modal {
+    width:100%;
+}
+
+.toast-center-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.no-link, .no-link:hover {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.tooltip {
+    top:0px;
+    background-color:black;
+    color:white;
+    border-radius:5px;
+    opacity:0;
+    position:absolute;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:  opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition:  opacity 0.5s;
+    transition:  opacity 0.5s;
+}
+
+.input-group > .select2-container--bootstrap4 .select2-selection--single {
+	height: 100%;
+	line-height: inherit;
+	padding-top: 10px;
+}
+
+/* Some issues with background-image on buttons in 
+ * dark mode and it's not particularly pretty. */
+.btn {
+    background-image: none !important;
+}
+
+/* Light blue on blue is not very readable */
+.dark-mode .jstree-anchor:hover {
+    color: #fff !important;
+}
+
+/* Not adminlte items */
+.dark-mode .select2-selection {
+    background-color: #343a40 !important;
+    border: 1px solid #6c757d !important;
+}
+.dark-mode .select2-selection span {
+    color: #fff !important;
+}
+
+/* Scrollbar */
+.dark-mode {
+    scrollbar-color: #3b3b3b #555;
+}
+/* =================================================== */
+/* ==== CUSTOMIZAÇÃO SENTINELARK (VERSÃO FINAL) ==== */
+/* =================================================== */
+
+/* --- Importa a fonte --- */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* --- Fundo e Corpo da Página --- */
+body.login-page, .login-page {
+    font-family: "Nunito", system-ui, -apple-system, sans-serif !important;
+    background: linear-gradient(135deg, #1f2937 0%, #000000 50%, #374151 100%) !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    background-size: cover !important;
+}
+
+/* --- Logo e Títulos --- */
+body.login-page .login-logo {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+}
+body.login-page .sentinel-logo-img {
+    width: 100px !important;
+    height: auto !important;
+}
+body.login-page .vault-title {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    color: #FFFFFF !important;
+    margin-top: 0.5rem !important;
+    letter-spacing: 1px !important;
+}
+
+/* --- Caixa de Login --- */
+body.login-page .login-box {
+    background: none !important;
+    box-shadow: none !important;
+    width: 100%;
+    max-width: 24rem;
+}
+body.login-page .card {
+    background-color: #1F2937 !important;
+    border: 1px solid #374151 !important;
+    border-radius: 0.75rem !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* --- Campos de Input (Usuário, Senha, etc) --- */
+body.login-page .input-group {
+    position: relative; /* Necessário para o posicionamento do ícone */
+}
+body.login-page .form-control {
+  background: #111827 !important;
+  border: 1px solid #374151 !important;
+  color: white !important;
+  height: auto;
+  padding-left: 2.5rem !important; /* Deixa espaço à esquerda para o ícone */
+  border-radius: 0.5rem !important;
+}
+body.login-page .form-control::placeholder {
+  color: #6B7280;
+}
+body.login-page .form-control:focus {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5) !important;
+}
+
+/* --- ÍCONES DOS INPUTS (CORRIGIDO) --- */
+body.login-page .input-group-prepend .input-group-text {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem; /* Distância da borda esquerda */
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent !important;
+    border: none !important;
+    color: #9CA3AF !important;
+}
+
+/* --- Botão Principal de Login --- */
+.dark-mode .btn-primary, .btn-primary {
+  background: linear-gradient(90deg, #10b981, #059669) !important;
+  background-color: #10b981 !important;
+  border-color: #059669 !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+.dark-mode .btn-primary:hover, .btn-primary:hover {
+    background: linear-gradient(90deg, #059669, #047857) !important;
+    background-color: #059669 !important;
+    border-color: #047857 !important;
+    transform: scale(1.02);
+}
+
+/* --- Esconde textos desnecessários --- */
+body.login-page .login-box-msg,
+body.login-page .card-header {
+    display: none !important;
+}
+
+/* --- Correção final para o padding do ícone --- */
+body.login-page .input-group-prepend .input-group-text {
+    padding: 0 !important; /* Remove o padding extra que quebra o layout */
+}
+
+/* --- Logo e Títulos --- */
+body.login-page .login-logo {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+}
+.sentinel-shield-icon {
+    width: 80px;  /* Ajuste o tamanho do escudo se precisar */
+    height: auto;
+    margin-bottom: 1rem; /* Espaço entre o escudo e o texto */
+}
+.sentinel-main-title {
+    font-size: 1.75rem; /* Tamanho da fonte para "Sentinel Ark Vault" */
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+/* --- Logo e Títulos (Ajuste Final) --- */
+body.login-page .login-logo {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+}
+.sentinel-logo-img {
+    width: 80px;  /* Ajuste o tamanho do escudo se precisar */
+    height: auto;
+    margin-bottom: 1rem; /* Espaço entre o escudo e o texto */
+}
+.vault-title {
+    font-size: 1.75rem; /* Tamanho da fonte para "Sentinel Ark Vault" */
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.vault-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #10B981 !important;
+    margin-top: 1rem !important;
+    letter-spacing: 1px !important;
+}
+
+body.login-page .vault-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #10B981 !important;   /* A cor verde que você queria */
+    margin-top: 1rem !important;
+    letter-spacing: 1px !important;
+}
+
+/* =============================================== */
+/* ==== CUSTOMIZAÇÃO DO CABEÇALHO PRINCIPAL ==== */
+/* =============================================== */
+
+.main-header.navbar {
+    background-color: #1F2937 !important; /* Cor de fundo escura do seu tema */
+    border-bottom: 1px solid #374151 !important;
+}
