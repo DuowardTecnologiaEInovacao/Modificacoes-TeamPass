@@ -1,20 +1,119 @@
-Tema de Branding "Sentinel Ark Vault" para TeampassEste repositório contém os arquivos necessários para aplicar a identidade visual Sentinel Ark Vault a uma instância do gerenciador de senhas Teampass.SumárioVisão GeralEscopo da CustomizaçãoPré-requisitosProcedimento de Instalação4.1. Backup dos Arquivos Originais4.2. Implantação dos Arquivos Customizados4.3. Ajuste de Permissões (Passo Crucial)4.4. Verificação Pós-instalaçãoManifesto de ArquivosHistórico de Versões1. Visão GeralEste pacote de branding foi desenvolvido para prover uma solução de "white-labeling" para o Teampass, garantindo uma experiência de usuário coesa e alinhada à identidade visual da Sentinel Ark.2. Escopo da CustomizaçãoAs modificações afetam exclusivamente a camada de apresentação (frontend) da aplicação. A lógica de negócios, segurança e funcionalidades do Teampass permanecem inalteradas.As áreas customizadas incluem:Interface de Login: Alteração completa do layout, logo e esquema de cores.Interface Principal: Alteração do logo no cabeçalho e esquema de cores.Branding: Substituição do ícone da aba do navegador (favicon).3. Pré-requisitosUma instância funcional do Teampass (versão 3.1.4.31).Acesso de superusuário (sudo) ao sistema de arquivos do servidor onde o Teampass está instalado.4. Procedimento de InstalaçãoSiga os passos abaixo com atenção para garantir uma aplicação sem erros.4.1. Backup dos Arquivos OriginaisAntes de qualquer modificação, é mandatório realizar o backup dos arquivos que serão substituídos.Execute os seguintes comandos no diretório raiz da sua instalação Teampass (ex: /var/www/teampass):# Navegue até a pasta raiz do Teampass
+# Tema de Branding "Sentinel Ark" para Teampass
+
+## Sumário
+1. [Visão Geral](#1-visão-geral)
+2. [Escopo da Customização](#2-escopo-da-customização)
+3. [Pré-requisitos](#3-pré-requisitos)
+4. [Procedimento de Instalação](#4-procedimento-de-instalação)
+    - 4.1. [Backup dos Arquivos Originais](#41-backup-dos-arquivos-originais)
+    - 4.2. [Implantação dos Arquivos Customizados](#42-implantação-dos-arquivos-customizados)
+    - 4.3. [Verificação Pós-instalação](#43-verificação-pós-instalação)
+5. [Manifesto de Arquivos](#5-manifesto-de-arquivos)
+6. [Suporte e Contribuição](#6-suporte-e-contribuição)
+7. [Histórico de Versões](#7-histórico-de-versões)
+
+---
+
+### 1. Visão Geral
+
+Este repositório contém um conjunto de arquivos de tema e branding desenvolvidos para aplicar a identidade visual da **Sentinel Ark** a uma instância padrão do gerenciador de senhas Teampass. O objetivo é prover uma solução de "white-labeling" que garanta uma experiência de usuário coesa e alinhada às diretrizes de marca da organização.
+
+### 2. Escopo da Customização
+
+As modificações contidas neste pacote de tema afetam exclusivamente a camada de apresentação (frontend) da aplicação. A lógica de negócios, segurança e funcionalidades do Teampass permanecem inalteradas.
+
+As áreas customizadas incluem:
+* **Interface de Login e Principal:** Alteração do logotipo e ajustes de estilo, carregando ativos de um diretório customizado para não interferir com os arquivos originais do Teampass.
+* **Elementos de Branding:** Substituição do favicon do navegador.
+* **Esquema de Cores e Estilos:** Modificações na folha de estilos `teampass.css` para refletir a paleta de cores da Sentinel Ark.
+
+### 3. Pré-requisitos
+
+Para a correta aplicação deste tema, os seguintes requisitos devem ser atendidos:
+* Uma instância funcional do Teampass (testado na versão 3.1.4.31) instalada em um servidor.
+* Acesso ao sistema de arquivos do servidor com permissões para ler, escrever e criar diretórios na pasta da aplicação Teampass.
+
+### 4. Procedimento de Instalação
+
+A aplicação do tema deve ser realizada com cautela, seguindo rigorosamente os passos abaixo.
+
+#### 4.1. Backup dos Arquivos Originais
+
+Antes de qualquer modificação, é mandatório realizar o backup dos arquivos que serão substituídos.
+
+Execute os seguintes comandos no diretório raiz da sua instalação Teampass:
+
+```bash
+# Exemplo de caminho: /var/www/html/teampass
 cd /caminho/para/sua/instalacao/teampass
 
-# Backup dos arquivos de layout, estilo e ícone
-sudo cp index.php index.php.bak
-sudo cp includes/core/login.php includes/core/login.php.bak
-sudo cp includes/css/teampass.css includes/css/teampass.css.bak
-sudo cp favicon.ico favicon.ico.bak
-4.2. Implantação dos Arquivos CustomizadosCom os backups em segurança, prossiga com a implantação dos novos arquivos.1. Crie o Diretório de Imagens CustomizadasEste diretório irá armazenar os logos, mantendo-os separados dos arquivos originais.# Dentro da pasta raiz do Teampass
-sudo mkdir -p includes/img/custom
-2. Copie os Ativos Visuais (Logos)Copie todos os arquivos de imagem (.png, .ico, .svg) deste repositório para o diretório recém-criado.Logo-SentinelArk.png -> includes/img/custom/Logo-SentinelArk.pngLogo-2-SentinelArk.png -> includes/img/custom/Logo-2-SentinelArk.pngLogo-2-SentinelArk.ico -> includes/img/custom/Logo-2-SentinelArk.ico3. Copie os Arquivos ModificadosSubstitua os arquivos originais pelos arquivos customizados deste repositório.index.php (deste repo) -> /caminho/para/teampass/index.phplogin.php (deste repo) -> /caminho/para/teampass/includes/core/login.phpteampass.css (deste repo) -> /caminho/para/teampass/includes/css/teampass.css4. Copie o FaviconO arquivo de ícone precisa ser copiado para a pasta raiz da aplicação.sudo cp includes/img/custom/Logo-2-SentinelArk.ico favicon.ico
-4.3. Ajuste de Permissões (Passo Crucial)Para que o servidor web consiga ler os novos arquivos e evitar erros, é essencial ajustar as permissões.# Define o usuário 'www-data' como dono de todos os arquivos
-sudo chown -R www-data:www-data /caminho/para/sua/instalacao/teampass
+# Backup dos arquivos de layout e estilo
+cp index.php index.php.backup
+cp login.php login.php.backup
+cp includes/css/teampass.css includes/css/teampass.css.backup
+```
 
-# Ajusta as permissões de pastas para 755
-sudo find /caminho/para/sua/instalacao/teampass -type d -exec chmod 755 {} \;
+#### 4.2. Implantação dos Arquivos Customizados
 
-# Ajusta as permissões de arquivos para 644
-sudo find /caminho/para/sua/instalacao/teampass -type f -exec chmod 644 {} \;
-4.4. Verificação Pós-instalaçãoApós a cópia e o ajuste das permissões, limpe o cache do seu navegador (Ctrl+Shift+R ou Cmd+Shift+R) e verifique:A tela de login exibe o novo logotipo e estilo.O ícone (favicon) na aba do navegador foi atualizado.Após o login, a interface principal exibe o logotipo e as cores corretas.5. Manifesto de ArquivosArquivoDestino (Relativo à Raiz do Teampass)Descriçãoindex.php/Layout principal, modificado para carregar o logo e o favicon customizado.login.phpincludes/core/Layout de login, modificado para carregar a nova identidade visual.teampass.cssincludes/css/Folha de estilos customizada com o esquema de cores da Sentinel Ark.Logo-SentinelArk.pngincludes/img/custom/Arquivo de imagem do logotipo principal.Logo-2-SentinelArk.pngincludes/img/custom/Versão alternativa ou secundária do logotipo.Logo-2-SentinelArk.icoincludes/img/custom/Ícone (favicon) para ser exibido na aba do navegador.6. Histórico de Versõesv1.0 (29/09/2025): Lançamento inicial. Customização de logos, cores e layouts.
+Com os backups em segurança, prossiga com a implantação dos novos arquivos.
+
+**1. Crie o Diretório de Ativos Customizados (Passo Crucial)**
+Este diretório irá armazenar os ativos visuais exclusivos da Sentinel Ark, mantendo-os separados dos arquivos originais do Teampass.
+```bash
+# Dentro da pasta raiz do Teampass
+mkdir -p public/assets_custom
+```
+
+**2. Copie os Novos Ativos Visuais**
+Copie os logotipos e o favicon deste repositório para o diretório recém-criado.
+-   `Logo-SentinelArk.png` -> `/caminho/para/teampass/public/assets_custom/Logo-SentinelArk.png`
+-   `Logo-2-SentinelArk.png` -> `/caminho/para/teampass/public/assets_custom/Logo-2-SentinelArk.png`
+-   `Logo-2-SentinelArk.ico` -> `/caminho/para/teampass/public/assets_custom/Logo-2-SentinelArk.ico`
+
+**3. Copie os Arquivos de Layout e Estilo**
+Estes arquivos já estão modificados para buscar as imagens do novo diretório `public/assets_custom`.
+-   `index.php` -> `/caminho/para/teampass/`
+-   `login.php` -> `/caminho/para/teampass/`
+-   `teampass.css` -> `/caminho/para/teampass/includes/css/`
+
+#### 4.3. Verificação Pós-instalação
+
+Após a cópia dos arquivos, limpe o cache do seu navegador (`Ctrl+Shift+R` ou `Cmd+Shift+R`) e verifique os seguintes pontos:
+1.  A tela de login exibe o novo logotipo da Sentinel Ark.
+2.  O ícone (favicon) na aba do navegador foi atualizado.
+3.  Após o login, a interface principal exibe o logotipo correto.
+4.  O esquema de cores geral da aplicação foi atualizado.
+
+### 5. Manifesto de Arquivos
+
+**index.php**
+- **Destino:** `/` (raiz do Teampass)
+- **Descrição:** Layout principal, modificado para carregar o logo de `public/assets_custom`.
+
+**login.php**
+- **Destino:** `/` (raiz do Teampass)
+- **Descrição:** Layout de login, modificado para carregar o logo de `public/assets_custom`.
+
+**teampass.css**
+- **Destino:** `includes/css/`
+- **Descrição:** Folha de estilos customizada com o esquema de cores da Sentinel Ark.
+
+**Logo-SentinelArk.png**
+- **Destino:** `public/assets_custom/`
+- **Descrição:** Arquivo de imagem do logotipo principal, em formato PNG.
+
+**Logo-2-SentinelArk.png**
+- **Destino:** `public/assets_custom/`
+- **Descrição:** Versão alternativa ou secundária do logotipo.
+
+**Logo-2-SentinelArk.ico**
+- **Destino:** `public/assets_custom/`
+- **Descrição:** Ícone (favicon) para ser exibido na aba do navegador.
+
+### 6. Suporte e Contribuição
+
+Para reportar problemas ou sugerir melhorias, por favor, abra uma "Issue" neste repositório.
+
+### 7. Histórico de Versões
+
+* **v1.0 (29/09/2025):** Lançamento inicial. Customização de logos, cores e layouts.
